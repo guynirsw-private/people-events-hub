@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +60,40 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        tag: {
+          government: "hsl(var(--tag-government))",
+          "government-text": "hsl(var(--tag-government-text))",
+          healthcare: "hsl(var(--tag-healthcare))",
+          "healthcare-text": "hsl(var(--tag-healthcare-text))",
+          science: "hsl(var(--tag-science))",
+          "science-text": "hsl(var(--tag-science-text))",
+          technology: "hsl(var(--tag-technology))",
+          "technology-text": "hsl(var(--tag-technology-text))",
+          philanthropy: "hsl(var(--tag-philanthropy))",
+          "philanthropy-text": "hsl(var(--tag-philanthropy-text))",
+          politics: "hsl(var(--tag-politics))",
+          "politics-text": "hsl(var(--tag-politics-text))",
+          economics: "hsl(var(--tag-economics))",
+          "economics-text": "hsl(var(--tag-economics-text))",
+          finance: "hsl(var(--tag-finance))",
+          "finance-text": "hsl(var(--tag-finance-text))",
+          media: "hsl(var(--tag-media))",
+          "media-text": "hsl(var(--tag-media-text))",
+          ecommerce: "hsl(var(--tag-ecommerce))",
+          "ecommerce-text": "hsl(var(--tag-ecommerce-text))",
+          social: "hsl(var(--tag-social))",
+          "social-text": "hsl(var(--tag-social-text))",
+          international: "hsl(var(--tag-international))",
+          "international-text": "hsl(var(--tag-international-text))",
+        },
+        category: {
+          all: "hsl(var(--category-all))",
+          politicians: "hsl(var(--category-politicians))",
+          business: "hsl(var(--category-business))",
+          media: "hsl(var(--category-media))",
+          scientists: "hsl(var(--category-scientists))",
+          academics: "hsl(var(--category-academics))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +102,22 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(10px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.3s ease-out",
       },
     },
   },
